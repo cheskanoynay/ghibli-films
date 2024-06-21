@@ -1,0 +1,83 @@
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px 3px; 
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, #f0d9c3, #e8c4b4); 
+    min-height: 100vh;
+    width: calc(100% - 10px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-content {
+    width: 80%;
+    max-width: 800px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .about-content h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: black;
+  }
+  
+  .about-content h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: black;
+  }
+  
+  .about-content h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: black;
+  }
+  
+  .about-content h4, .about-content h5, .about-content h6 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .about-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 16px;
+    color: black;
+    line-height: 1.5;
+  }
+  
+  .about-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background:  #d4a490;
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .about-content button:hover {
+    background: linear-gradient(200deg, #e8c4b4);
+  }
+  

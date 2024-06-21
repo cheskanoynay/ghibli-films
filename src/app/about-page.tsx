@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Film } from "./film.interface";
+import "./about-page.scss";
 
 export function AboutPage() {
   const { filmId } = useParams();
@@ -12,17 +13,27 @@ export function AboutPage() {
     axios
       .get(`https://ghibliapi.vercel.app/films/${filmId}`)
       .then((response) => setFilmDetails(response.data));
-  }, []);
+  }, [filmId]);
 
   const handleBack = () => {
     navigate("/");
   };
 
   return (
-    <div>
-      <h1>Welcome to {filmDetails?.title}</h1>
+    <div className="outer-container">
+      <div className="about-container">
+        <div className="about-content">
+          {}
+          <h2>{filmDetails?.original_title}</h2>
+          <img src={filmDetails?.movie_banner} alt={filmDetails?.title} />
+          <h3>{filmDetails?.description}</h3>
+          <h4>Director: {filmDetails?.director}</h4>
+          <h5>Producer: {filmDetails?.producer}</h5>
+          <h5>Released Date: {filmDetails?.release_date}</h5>
 
-      <button onClick={handleBack}>Go Back</button>
+          <button onClick={handleBack}>Go Back</button>
+        </div>
+      </div>
     </div>
   );
 }
